@@ -24,14 +24,21 @@ namespace DynamicTable {
             // column1Label
             //
 
+
+            TableLayoutPanel.RowCount = 2;
             AddLabels();
 
             // TextField rows:
             //for (int i = 0; i < Properties.Settings.Default.rowcount; i++) {
-            for (int i = 0; i < 4; i++) {
+            for (int i = 0; i <3; i++) {
+                TableLayoutPanel.RowCount++;
                 TableLayoutPanel.Controls.Add(new MetroFramework.Controls.MetroTextBox() { Anchor = (AnchorStyles.Left | AnchorStyles.Right) });
                 TableLayoutPanel.Controls.Add(new MetroFramework.Controls.MetroTextBox() { Anchor = (AnchorStyles.Left | AnchorStyles.Right) });
                 TableLayoutPanel.Controls.Add(new MetroFramework.Controls.MetroCheckBox() { Anchor = (AnchorStyles.None) });
+                //if (i < 1)
+                //TableLayoutPanel.RowCount++;
+                //TableLayoutPanel.Size = new System.Drawing.Size(TableLayoutPanel.Size.Width, TableLayoutPanel.Size.Height + 36);
+
             }
 
             // Add the +/- rows buttons:
@@ -42,7 +49,6 @@ namespace DynamicTable {
         private void AddLabels () {
             MetroFramework.Controls.MetroLabel column1Label = new MetroFramework.Controls.MetroLabel();
             TableLayoutPanel.Controls.Add(column1Label);
-            column1Label.Size = new System.Drawing.Size(73, 20);
             column1Label.TabIndex = 1;
             column1Label.Text = "Column 1";
             //
@@ -50,7 +56,6 @@ namespace DynamicTable {
             //
             MetroFramework.Controls.MetroLabel column2Label = new MetroFramework.Controls.MetroLabel();
             TableLayoutPanel.Controls.Add(column2Label);
-            column2Label.Size = new System.Drawing.Size(73, 20);
             column2Label.TabIndex = 2;
             column2Label.Text = "Column 2";
             //
@@ -58,7 +63,6 @@ namespace DynamicTable {
             //
             MetroFramework.Controls.MetroLabel column3Label = new MetroFramework.Controls.MetroLabel();
             TableLayoutPanel.Controls.Add(column3Label);
-            column3Label.Size = new System.Drawing.Size(73, 20);
             column3Label.TabIndex = 4;
             column3Label.Text = "?";
         }
