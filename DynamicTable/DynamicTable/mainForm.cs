@@ -24,25 +24,23 @@ namespace DynamicTable {
             // column1Label
             //
 
-
+            // Add 2 rows: Labels (top) and buttons (bottom)
             TableLayoutPanel.RowCount = 2;
             AddLabels();
 
-            // TextField rows:
-            //for (int i = 0; i < Properties.Settings.Default.rowcount; i++) {
+            // Add rows and increase the row count accordingly:
             for (int i = 0; i <3; i++) {
                 TableLayoutPanel.RowCount++;
                 TableLayoutPanel.Controls.Add(new MetroFramework.Controls.MetroTextBox() { Anchor = (AnchorStyles.Left | AnchorStyles.Right) });
                 TableLayoutPanel.Controls.Add(new MetroFramework.Controls.MetroTextBox() { Anchor = (AnchorStyles.Left | AnchorStyles.Right) });
                 TableLayoutPanel.Controls.Add(new MetroFramework.Controls.MetroCheckBox() { Anchor = (AnchorStyles.None) });
-                //if (i < 1)
-                //TableLayoutPanel.RowCount++;
-                //TableLayoutPanel.Size = new System.Drawing.Size(TableLayoutPanel.Size.Width, TableLayoutPanel.Size.Height + 36);
-
             }
 
             // Add the +/- rows buttons:
             AddRowsButtons();
+
+            // Check if the button should be disabled (the total row count is below 4 - one login row)
+            RemoveRowButtonStatusCheck();
 
         }
 
@@ -107,14 +105,15 @@ namespace DynamicTable {
                 addRowButton.Enabled = false;
             }
 
+            MessageBox.Show(TableLayoutPanel.RowCount.ToString());
+
             // For troubleshooting: Show the saved usernames/passwords (from the last startup) and the new number of rows:
             //ShowRowsAndEntries();
         }
 
         private void removeRowButton_Click(object sender, EventArgs e) {
-            MessageBox.Show(TableLayoutPanel.RowCount.ToString());
-
             TableLayoutPanel.RowCount--;
+
             // Remove the last row (the 3 last controls - , TextBox, TextBox, CheckBox):
             TableLayoutPanel.Controls.RemoveAt(/*Properties.Settings.Default.rowcount*/ TableLayoutPanel.RowCount * 3 - 1);
             TableLayoutPanel.Controls.RemoveAt(/*Properties.Settings.Default.rowcount*/ TableLayoutPanel.RowCount * 3 - 2);
@@ -124,8 +123,10 @@ namespace DynamicTable {
             //Properties.Settings.Default.rowcount--;
             TableLayoutPanel.RowCount--;
 
+            MessageBox.Show(TableLayoutPanel.RowCount.ToString());
+
             // Check if the button should be disabled (the total row count is below 4 - one login row)
-            //RemoveRowButtonStatusCheck();
+            RemoveRowButtonStatusCheck();
 
             // For troubleshooting: Show the saved usernames/passwords (from the last startup) and the new number of rows:
             //ShowRowsAndEntries();
