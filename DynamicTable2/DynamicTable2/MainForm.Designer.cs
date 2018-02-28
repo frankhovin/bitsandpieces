@@ -66,16 +66,16 @@
             // 
             // metroLabel1
             // 
-            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel1.Location = new System.Drawing.Point(30, 55);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(329, 20);
             this.metroLabel1.TabIndex = 5;
-            this.metroLabel1.Text = "Example 1: 3 row autosize table directly in the frame";
+            this.metroLabel1.Text = "3 row autosize table directly in the frame";
             // 
             // metroLabel2
             // 
-            this.metroLabel2.Location = new System.Drawing.Point(391, 79);
+            this.metroLabel2.Location = new System.Drawing.Point(391, 55);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(192, 20);
             this.metroLabel2.TabIndex = 6;

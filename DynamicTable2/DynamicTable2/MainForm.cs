@@ -63,6 +63,11 @@ namespace DynamicTable2 {
                 extRemoveRowButton.Enabled = false;
             else
                 extRemoveRowButton.Enabled = true;
+
+            if (tableLayoutPanel1.RowCount == maxrows)
+                extAddRowButton.Enabled = false;
+            else
+                extAddRowButton.Enabled = true;
         }
     }
 }
