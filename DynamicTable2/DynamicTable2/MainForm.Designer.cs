@@ -27,6 +27,7 @@
             this.extRemoveRowButton = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // extAddRowButton
@@ -45,6 +46,7 @@
             this.extRemoveRowButton.Size = new System.Drawing.Size(85, 23);
             this.extRemoveRowButton.TabIndex = 1;
             this.extRemoveRowButton.Text = "Remove Row";
+            this.extRemoveRowButton.Click += new System.EventHandler(this.extRemoveRowButton_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -71,11 +73,20 @@
             this.metroLabel1.TabIndex = 5;
             this.metroLabel1.Text = "Example 1: 3 row autosize table directly in the frame";
             // 
+            // metroLabel2
+            // 
+            this.metroLabel2.Location = new System.Drawing.Point(391, 79);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(192, 20);
+            this.metroLabel2.TabIndex = 6;
+            this.metroLabel2.Text = "metroLabel2";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(612, 446);
+            this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.extRemoveRowButton);
@@ -93,6 +104,7 @@
         private MetroFramework.Controls.MetroButton extRemoveRowButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
     }
 }
 
