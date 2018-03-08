@@ -69,5 +69,11 @@ namespace DynamicTable2 {
             else
                 extAddRowButton.Enabled = true;
         }
+
+        private void page2Button_Click(object sender, EventArgs e) {
+            //Application.Run(new MainForm2());
+            var MainForm2 = new MainForm2();
+            MainForm2.Show();
+        }
     }
 }

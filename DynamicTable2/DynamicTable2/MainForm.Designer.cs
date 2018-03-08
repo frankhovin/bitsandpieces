@@ -28,11 +28,13 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.page1Button = new MetroFramework.Controls.MetroButton();
+            this.page2Button = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // extAddRowButton
             // 
-            this.extAddRowButton.Location = new System.Drawing.Point(391, 26);
+            this.extAddRowButton.Location = new System.Drawing.Point(390, 50);
             this.extAddRowButton.Name = "extAddRowButton";
             this.extAddRowButton.Size = new System.Drawing.Size(85, 23);
             this.extAddRowButton.TabIndex = 0;
@@ -41,7 +43,7 @@
             // 
             // extRemoveRowButton
             // 
-            this.extRemoveRowButton.Location = new System.Drawing.Point(498, 26);
+            this.extRemoveRowButton.Location = new System.Drawing.Point(498, 50);
             this.extRemoveRowButton.Name = "extRemoveRowButton";
             this.extRemoveRowButton.Size = new System.Drawing.Size(85, 23);
             this.extRemoveRowButton.TabIndex = 1;
@@ -56,7 +58,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(30, 97);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(25, 125);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -66,7 +68,7 @@
             // metroLabel1
             // 
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel1.Location = new System.Drawing.Point(30, 55);
+            this.metroLabel1.Location = new System.Drawing.Point(25, 80);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(329, 20);
             this.metroLabel1.TabIndex = 5;
@@ -74,17 +76,36 @@
             // 
             // metroLabel2
             // 
-            this.metroLabel2.Location = new System.Drawing.Point(391, 55);
+            this.metroLabel2.Location = new System.Drawing.Point(390, 80);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(192, 20);
             this.metroLabel2.TabIndex = 6;
             this.metroLabel2.Text = "metroLabel2";
             // 
+            // page1Button
+            // 
+            this.page1Button.Location = new System.Drawing.Point(25, 13);
+            this.page1Button.Name = "page1Button";
+            this.page1Button.Size = new System.Drawing.Size(75, 23);
+            this.page1Button.TabIndex = 7;
+            this.page1Button.Text = "Page 1";
+            // 
+            // page2Button
+            // 
+            this.page2Button.Location = new System.Drawing.Point(117, 12);
+            this.page2Button.Name = "page2Button";
+            this.page2Button.Size = new System.Drawing.Size(75, 23);
+            this.page2Button.TabIndex = 8;
+            this.page2Button.Text = "Page 2";
+            this.page2Button.Click += new System.EventHandler(this.page2Button_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(612, 446);
+            this.ClientSize = new System.Drawing.Size(612, 453);
+            this.Controls.Add(this.page2Button);
+            this.Controls.Add(this.page1Button);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -104,6 +125,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroButton page1Button;
+        private MetroFramework.Controls.MetroButton page2Button;
     }
 }
 
