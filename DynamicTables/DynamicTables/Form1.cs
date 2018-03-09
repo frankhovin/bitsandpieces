@@ -19,7 +19,7 @@ namespace DynamicTables {
         public Form1 () {
             InitializeComponent();
 
-            PopulatePanelOne();
+            //PopulatePanelOne();
         }
 
         private void bttnPrevious_Click(object sender, EventArgs e) {
@@ -41,10 +41,11 @@ namespace DynamicTables {
             listPanel.Add(panel2);
             panel1.BringToFront();
             panel2.SendToBack();
+
         }
 
-        private void PopulatePanelOne () {
-            //panel1.RowCount = startingrows;
+        /*private void PopulatePanelOne () {
+            tableLayoutPanel1.RowCount = startingrows;
 
             for (int i = 0; i < startingrows; i++) {
                 tableLayoutPanel1.Controls.Add(new MetroFramework.Controls.MetroTextBox() { Anchor = (AnchorStyles.Left | AnchorStyles.Right), Size = new System.Drawing.Size(120, 17), CustomBackground = true, BackColor = System.Drawing.SystemColors.ControlLightLight });
@@ -52,10 +53,10 @@ namespace DynamicTables {
                 tableLayoutPanel1.Controls.Add(new MetroFramework.Controls.MetroCheckBox() { Anchor = (AnchorStyles.Left), Size = new System.Drawing.Size(15, 17) });
             }
 
-            //table1label.Text = "Rowcount: " + tableLayoutPanel1.RowCount;
+            table1label.Text = "Rowcount: " + tableLayoutPanel1.RowCount;
 
             //extRemoveRowButtonStateCheck();
-        }
+        }*/
 
         private void extAddRowBttn_Click(object sender, EventArgs e) {
 
