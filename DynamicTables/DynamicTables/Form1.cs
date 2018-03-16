@@ -64,9 +64,18 @@ namespace DynamicTables {
             tableLayoutPanel1.RowCount = startingrows;
 
             for (int i = 0; i < startingrows; i++) {
-                tableLayoutPanel1.Controls.Add(new MetroFramework.Controls.MetroTextBox() { Anchor = (AnchorStyles.Left | AnchorStyles.Right), Size = new System.Drawing.Size(120, 17), CustomBackground = true, BackColor = System.Drawing.SystemColors.ControlLightLight });
-                tableLayoutPanel1.Controls.Add(new MetroFramework.Controls.MetroTextBox() { Anchor = (AnchorStyles.Left | AnchorStyles.Right), Size = new System.Drawing.Size(120, 17), CustomBackground = true, BackColor = System.Drawing.SystemColors.ControlLightLight });
-                tableLayoutPanel1.Controls.Add(new MetroFramework.Controls.MetroCheckBox() { Anchor = (AnchorStyles.Left), Size = new System.Drawing.Size(15, 17) });
+                tableLayoutPanel1.Controls.Add(new MetroFramework.Controls.MetroTextBox() {
+                    Anchor = (AnchorStyles.Left | AnchorStyles.Right),
+                    Size = new System.Drawing.Size(120, 17),
+                    CustomBackground = true,
+                    BackColor = System.Drawing.SystemColors.ControlLightLight });
+                tableLayoutPanel1.Controls.Add(new MetroFramework.Controls.MetroTextBox() {
+                    Anchor = (AnchorStyles.Left | AnchorStyles.Right),
+                    Size = new System.Drawing.Size(120, 17),
+                    CustomBackground = true,
+                    BackColor = System.Drawing.SystemColors.ControlLightLight });
+                tableLayoutPanel1.Controls.Add(new MetroFramework.Controls.MetroCheckBox() {
+                    Anchor = (AnchorStyles.Left), Size = new System.Drawing.Size(15, 17) });
             }
 
             page1RowCountLbl.Text = "Rowcount: " + tableLayoutPanel1.RowCount;
@@ -80,9 +89,19 @@ namespace DynamicTables {
         private void extAddRowBttn_Click(object sender, EventArgs e) {
             tableLayoutPanel1.RowCount++;
 
-            tableLayoutPanel1.Controls.Add(new MetroFramework.Controls.MetroTextBox() { Anchor = (AnchorStyles.Left | AnchorStyles.Right), Size = new System.Drawing.Size(120, 17), CustomBackground = true, BackColor = System.Drawing.SystemColors.ControlLightLight });
-            tableLayoutPanel1.Controls.Add(new MetroFramework.Controls.MetroTextBox() { Anchor = (AnchorStyles.Left | AnchorStyles.Right), Size = new System.Drawing.Size(120, 17), CustomBackground = true, BackColor = System.Drawing.SystemColors.ControlLightLight });
-            tableLayoutPanel1.Controls.Add(new MetroFramework.Controls.MetroCheckBox() { Anchor = (AnchorStyles.Left), Size = new System.Drawing.Size(15, 17) });
+            tableLayoutPanel1.Controls.Add(new MetroFramework.Controls.MetroTextBox() {
+                Anchor = (AnchorStyles.Left | AnchorStyles.Right),
+                Size = new System.Drawing.Size(120, 17),
+                CustomBackground = true,
+                BackColor = System.Drawing.SystemColors.ControlLightLight });
+            tableLayoutPanel1.Controls.Add(new MetroFramework.Controls.MetroTextBox() {
+                Anchor = (AnchorStyles.Left | AnchorStyles.Right),
+                Size = new System.Drawing.Size(120, 17),
+                CustomBackground = true,
+                BackColor = System.Drawing.SystemColors.ControlLightLight });
+            tableLayoutPanel1.Controls.Add(new MetroFramework.Controls.MetroCheckBox() {
+                Anchor = (AnchorStyles.Left),
+                Size = new System.Drawing.Size(15, 17) });
 
             page1RowCountLbl.Text = "Rowcount: " + tableLayoutPanel1.RowCount;
 
